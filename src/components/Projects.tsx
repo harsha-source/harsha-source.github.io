@@ -6,34 +6,34 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and secure payments.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "AI-Powered Autograder Framework",
+      description: "Building an AI-powered autograder using Docker, Kafka, Hadoop and microservices architecture to evaluate distributed systems projects. Leveraged LLMs to automate test case generation for 400+ submissions across 5 projects.",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
+      tags: ["Docker", "Kafka", "Hadoop", "LLMs", "Microservices"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tags: ["React", "Firebase", "Tailwind CSS", "TypeScript"],
+      title: "Graph ML on Crystals",
+      description: "Collaborated with 4 researchers to represent 1.5M crystal structures as graphs. Applied KNN, eigenvector centrality, and graph compression techniques, achieving 95% accuracy. Published research at ACM ICMLT 2022.",
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
+      tags: ["Graph Neural Networks", "PyTorch", "Machine Learning", "Research"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics with stunning visualizations.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      tags: ["React", "API Integration", "Charts.js", "CSS Grid"],
+      title: "Scalable Data Ingestion Pipeline",
+      description: "Designed and implemented a scalable data ingestion pipeline for LinkedIn Ads connector using RabbitMQ and Kafka to handle 40+ data schemas across 400+ customers, improving sync latency and system robustness.",
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop",
+      tags: ["Kafka", "RabbitMQ", "ETL", "Distributed Systems"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing modern web development techniques with smooth animations and optimized performance.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      tags: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
+      title: "Contain-19 Android App",
+      description: "Developed a Java-based Android app to detect nearby quarantine zones using geofencing with GeoFire and Firebase DB and P2P technology to assist with social distancing during COVID-19.",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
+      tags: ["Android", "Java", "Firebase", "GeoFencing", "P2P"],
       liveUrl: "#",
       githubUrl: "#",
     },
@@ -47,7 +47,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for creating amazing digital experiences.
+            Here are some of my key projects spanning AI/ML research, distributed systems, 
+            and scalable data engineering solutions.
           </p>
         </div>
 

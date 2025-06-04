@@ -1,28 +1,28 @@
 
-import { Code, Palette, Zap, Heart } from "lucide-react";
+import { Code, Database, Cloud, Brain } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   const skills = [
     {
       icon: <Code className="w-8 h-8 text-blue-400" />,
-      title: "Frontend Development",
-      description: "React, TypeScript, Tailwind CSS, Next.js",
+      title: "Programming Languages",
+      description: "Java, Python, C/C++, JavaScript, SQL, HTML, CSS",
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Backend Development", 
-      description: "Node.js, Python, PostgreSQL, MongoDB",
+      icon: <Database className="w-8 h-8 text-green-400" />,
+      title: "Databases & Tools", 
+      description: "MySQL, PostgreSQL, MongoDB, Redis, Docker, Kubernetes",
     },
     {
-      icon: <Palette className="w-8 h-8 text-purple-400" />,
-      title: "UI/UX Design",
-      description: "Figma, Adobe Creative Suite, Prototyping",
+      icon: <Cloud className="w-8 h-8 text-purple-400" />,
+      title: "Cloud & Frameworks",
+      description: "AWS, Azure, SpringBoot, React, NodeJS, Kafka, Jenkins",
     },
     {
-      icon: <Heart className="w-8 h-8 text-red-400" />,
-      title: "Problem Solving",
-      description: "Creative solutions, Critical thinking, Innovation",
+      icon: <Brain className="w-8 h-8 text-yellow-400" />,
+      title: "AI/ML Technologies",
+      description: "PyTorch, TensorFlow, BERT, LLMs, Graph Neural Networks",
     },
   ];
 
@@ -34,8 +34,8 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            I'm a passionate developer with 5+ years of experience creating digital solutions. 
-            I love turning complex problems into simple, beautiful, and intuitive designs.
+            I'm a passionate software engineer pursuing my MS in Information Systems at Carnegie Mellon University. 
+            With experience in distributed systems, AI/ML, and scalable data pipelines, I love solving complex technical challenges.
           </p>
         </div>
 
@@ -64,22 +64,22 @@ const About = () => {
                 My Journey
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Started as a curious student who loved building things. Over the years, 
-                I've worked with startups and established companies, always focusing on 
-                creating meaningful user experiences through clean, efficient code.
+                Currently pursuing my MS at Carnegie Mellon University after completing my BTech in Computer Science. 
+                I've worked as a Software Engineer at Hevodata, building scalable ETL pipelines and data ingestion systems. 
+                My research focuses on AI-powered autograding systems and graph neural networks.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span className="text-gray-300">5+ Years Experience</span>
+                  <span className="text-gray-300">3+ Years Experience</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  <span className="text-gray-300">50+ Projects Completed</span>
+                  <span className="text-gray-300">Research Published at ACM</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Always Learning</span>
+                  <span className="text-gray-300">Carnegie Mellon Graduate</span>
                 </div>
               </div>
             </div>

@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-blue-400" />,
       title: "Email",
-      detail: "alex@portfolio.com",
-      link: "mailto:alex@portfolio.com",
+      detail: "hdurvasu@andrew.cmu.edu",
+      link: "mailto:hdurvasu@andrew.cmu.edu",
     },
     {
       icon: <Phone className="w-6 h-6 text-green-400" />,
       title: "Phone",
-      detail: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      detail: "(412) 844-0581",
+      link: "tel:+14128440581",
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-400" />,
       title: "Location",
-      detail: "San Francisco, CA",
+      detail: "Pittsburgh, PA",
       link: "#",
     },
   ];
@@ -61,8 +61,8 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you. 
-            Let's create something amazing together!
+            Have a project in mind or want to discuss opportunities in software engineering, 
+            AI/ML, or distributed systems? I'd love to hear from you!
           </p>
         </div>
 
@@ -122,8 +122,8 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
               <p className="text-gray-400 mb-8">
-                Feel free to reach out through any of these channels. I'm always excited 
-                to discuss new opportunities and interesting projects.
+                Feel free to reach out for opportunities in software engineering, AI/ML research, 
+                or to discuss innovative projects in distributed systems and data engineering.
               </p>
             </div>
 
@@ -150,8 +150,8 @@ const Contact = () => {
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border border-white/10">
               <h4 className="text-lg font-semibold text-white mb-3">Let's Build Something Great</h4>
               <p className="text-gray-400 text-sm">
-                I'm currently available for freelance work and new opportunities. 
-                Let's discuss how we can bring your ideas to life!
+                Currently open to full-time opportunities starting December 2025. 
+                Let's discuss how we can create innovative solutions together!
               </p>
             </div>
           </div>
@@ -162,7 +162,7 @@ const Contact = () => {
       <div className="mt-20 pt-8 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-500">
-            © {new Date().getFullYear()} My Portfolio. All rights reserved.
+            © {new Date().getFullYear()} Harsha Durvasula. All rights reserved.
           </p>
         </div>
       </div>

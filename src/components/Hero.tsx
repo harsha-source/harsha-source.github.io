@@ -16,14 +16,14 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
-            Hello, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Alex</span>
+            Hello, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Harsha</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-300">
-            Full Stack Developer & UI/UX Designer
+            Software Engineer & AI/ML Researcher
           </p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in delay-500">
-            I create beautiful, functional, and user-centered digital experiences. 
-            Passionate about clean code and innovative design.
+            MS in Information Systems at Carnegie Mellon University. Passionate about scalable distributed systems, 
+            AI-powered solutions, and building innovative data-intensive applications.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const Hero = () => {
           <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
             <Linkedin size={28} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
+          <a href="mailto:hdurvasu@andrew.cmu.edu" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
             <Mail size={28} />
           </a>
         </div>
