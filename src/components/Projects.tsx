@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: "Book Recommender Microservice System",
       description: "Containerized and deployed a 5-service bookstore recommender system using Docker, Kubernetes (EKS), and AWS RDS. Implemented liveness probes, CI/CD pipelines, and Kafka integration for asynchronous workflows.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop",
       tags: ["Docker", "Kubernetes", "AWS EKS", "Kafka", "Microservices", "CI/CD"],
       liveUrl: "#",
       githubUrl: "#",
@@ -43,7 +43,7 @@ const Projects = () => {
     <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -54,7 +54,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-gray-700/50 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2 group backdrop-blur-sm">
+            <Card key={index} className="bg-gradient-to-br from-gray-900/50 to-red-900/30 border-red-700/50 overflow-hidden hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-500 hover:-translate-y-2 group backdrop-blur-sm">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
@@ -63,11 +63,11 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">
                   {project.title}
                 </h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">
@@ -77,7 +77,7 @@ const Projects = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30 hover:border-blue-400/50 transition-colors duration-300"
+                      className="px-3 py-1 bg-gradient-to-r from-red-500/20 to-blue-500/20 text-red-300 rounded-full text-sm border border-red-500/30 hover:border-red-400/50 transition-colors duration-300"
                     >
                       {tag}
                     </span>
@@ -86,7 +86,7 @@ const Projects = () => {
                 <div className="flex space-x-3">
                   <Button 
                     size="sm" 
-                    className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white flex items-center space-x-2 shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                    className="bg-gradient-to-r from-red-500 to-blue-500 hover:from-red-600 hover:to-blue-600 text-white flex items-center space-x-2 shadow-lg hover:shadow-red-500/25 transition-all duration-300"
                   >
                     <ExternalLink size={16} />
                     <span>Demo</span>
@@ -94,7 +94,7 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     variant="outline"
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700/50 hover:border-gray-500 flex items-center space-x-2 transition-all duration-300"
+                    className="border-gray-600 text-gray-300 hover:bg-red-700/20 hover:border-red-500 flex items-center space-x-2 transition-all duration-300"
                   >
                     <Github size={16} />
                     <span>Code</span>
