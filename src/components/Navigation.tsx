@@ -38,10 +38,10 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-white/10">
+    <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
             Portfolio
           </div>
 
@@ -53,8 +53,8 @@ const Navigation = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
-                    ? "text-blue-400 bg-blue-400/10"
-                    : "text-gray-300 hover:text-white hover:bg-white/5"
+                    ? "text-purple-400 bg-purple-400/10"
+                    : "text-gray-300 hover:text-white hover:bg-gray-800/50"
                 }`}
               >
                 {item.label}
@@ -83,8 +83,8 @@ const Navigation = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`px-3 py-2 rounded-md text-sm font-medium text-left transition-all duration-300 ${
                     activeSection === item.id
-                      ? "text-blue-400 bg-blue-400/10"
-                      : "text-gray-300 hover:text-white hover:bg-white/5"
+                      ? "text-purple-400 bg-purple-400/10"
+                      : "text-gray-300 hover:text-white hover:bg-gray-800/50"
                   }`}
                 >
                   {item.label}

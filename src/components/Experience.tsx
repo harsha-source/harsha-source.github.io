@@ -17,7 +17,7 @@ const Experience = () => {
         "Implemented comprehensive feedback systems for distributed systems evaluation"
       ],
       technologies: ["Docker", "Kafka", "Hadoop", "LLMs", "Microservices", "Python"],
-      icon: <Briefcase className="w-6 h-6 text-blue-400" />
+      icon: <Briefcase className="w-6 h-6 text-purple-400" />
     },
     {
       title: "Software Engineer (Integrations Team)",
@@ -34,7 +34,7 @@ const Experience = () => {
         "Developed nested compressed file ingestion increasing integration test coverage by 40%"
       ],
       technologies: ["Java", "Redis", "RabbitMQ", "Kafka", "OAuth2.0", "AWS", "SpringBoot"],
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />
+      icon: <TrendingUp className="w-6 h-6 text-indigo-400" />
     }
   ];
 
@@ -42,7 +42,7 @@ const Experience = () => {
     <section id="experience" className="py-20 px-4 bg-gradient-to-b from-transparent to-black/10">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Work Experience
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -52,21 +52,21 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="bg-gradient-to-r from-gray-900/30 to-gray-800/30 border-l-4 border-l-blue-400 border-gray-700/50 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 backdrop-blur-sm group">
+            <Card key={index} className="bg-gradient-to-r from-gray-900/40 to-black/40 border-l-4 border-l-purple-400 border-gray-700/50 hover:shadow-2xl hover:shadow-purple-500/5 transition-all duration-500 backdrop-blur-sm group">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex items-start space-x-4 mb-4 lg:mb-0">
-                    <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                    <div className="p-3 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
                       {exp.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
                         {exp.title}
                       </h3>
                       <div className="flex items-center space-x-4 text-gray-300 mb-2">
                         <div className="flex items-center space-x-2">
-                          <Users className="w-4 h-4 text-blue-400" />
-                          <span className="font-semibold text-blue-400">{exp.company}</span>
+                          <Users className="w-4 h-4 text-purple-400" />
+                          <span className="font-semibold text-purple-400">{exp.company}</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <MapPin className="w-4 h-4 text-gray-400" />
@@ -76,7 +76,7 @@ const Experience = () => {
                       <div className="flex items-center space-x-2 mb-4">
                         <Calendar className="w-4 h-4 text-gray-400" />
                         <span className="text-gray-400">{exp.duration}</span>
-                        <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">
+                        <span className="px-3 py-1 bg-indigo-500/20 text-indigo-400 text-sm rounded-full border border-indigo-500/30">
                           {exp.type}
                         </span>
                       </div>
@@ -93,7 +93,7 @@ const Experience = () => {
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, achIndex) => (
                       <li key={achIndex} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-gray-300 leading-relaxed">{achievement}</span>
                       </li>
                     ))}
@@ -106,7 +106,7 @@ const Experience = () => {
                     {exp.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30 hover:border-purple-400/50 transition-colors duration-300"
+                        className="px-3 py-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300 rounded-full text-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-colors duration-300"
                       >
                         {tech}
                       </span>

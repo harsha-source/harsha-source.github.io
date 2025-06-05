@@ -34,19 +34,19 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6 text-red-400" />,
+      icon: <Mail className="w-6 h-6 text-purple-400" />,
       title: "Email",
       detail: "hdurvasu@andrew.cmu.edu",
       link: "mailto:hdurvasu@andrew.cmu.edu",
     },
     {
-      icon: <Phone className="w-6 h-6 text-blue-400" />,
+      icon: <Phone className="w-6 h-6 text-indigo-400" />,
       title: "Phone",
       detail: "(412) 844-0581",
       link: "tel:+14128440581",
     },
     {
-      icon: <MapPin className="w-6 h-6 text-red-400" />,
+      icon: <MapPin className="w-6 h-6 text-purple-400" />,
       title: "Location",
       detail: "Pittsburgh, PA",
       link: "#",
@@ -57,7 +57,7 @@ const Contact = () => {
     <section id="contact" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
             Contact Me
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -66,9 +66,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Form */}
-          <Card className="bg-white/5 border-white/10">
+          <Card className="lg:col-span-2 bg-gradient-to-br from-gray-900/60 to-black/60 border-gray-700/30">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -80,7 +80,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-red-400"
+                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-purple-400"
                   />
                 </div>
                 <div>
@@ -91,7 +91,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-red-400"
+                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-purple-400"
                   />
                 </div>
                 <div>
@@ -102,13 +102,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-red-400 resize-none"
+                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-purple-400 resize-none"
                   />
                 </div>
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-red-500 to-blue-500 hover:from-red-600 hover:to-blue-600 text-white font-semibold py-3 flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-3 flex items-center justify-center space-x-2"
                 >
                   <Send size={20} />
                   <span>Send Message</span>
@@ -118,28 +118,26 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <a href={info.link} className="flex items-center space-x-4 group">
-                      <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        {info.icon}
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white group-hover:text-red-400 transition-colors duration-300">
-                          {info.title}
-                        </h4>
-                        <p className="text-gray-400">{info.detail}</p>
-                      </div>
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+          <div className="space-y-6">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="bg-gradient-to-br from-gray-900/60 to-black/60 border-gray-700/30 hover:bg-gray-800/40 transition-all duration-300">
+                <CardContent className="p-6">
+                  <a href={info.link} className="flex items-center space-x-4 group">
+                    <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      {info.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
+                        {info.title}
+                      </h4>
+                      <p className="text-gray-400">{info.detail}</p>
+                    </div>
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
 
-            <div className="bg-gradient-to-r from-red-500/10 to-blue-500/10 rounded-2xl p-6 border border-white/10">
+            <div className="bg-gradient-to-r from-purple-600/10 to-indigo-600/10 rounded-2xl p-6 border border-gray-700/30">
               <h4 className="text-lg font-semibold text-white mb-3">Let's Build Something Great</h4>
               <p className="text-gray-400 text-sm">
                 Currently open to full-time opportunities starting December 2025. 
@@ -151,7 +149,7 @@ const Contact = () => {
       </div>
 
       {/* Footer */}
-      <div className="mt-20 pt-8 border-t border-white/10">
+      <div className="mt-20 pt-8 border-t border-gray-800">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-500">
             © {new Date().getFullYear()} Harsha Durvasula. All rights reserved.
