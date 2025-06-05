@@ -1,26 +1,26 @@
 
-import { Code, Database, Cloud, Brain } from "lucide-react";
+import { Code, Database, Cloud, Brain, Award, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   const skills = [
     {
-      icon: <Code className="w-8 h-8 text-blue-400" />,
+      icon: <Code className="w-8 h-8 text-cyan-400" />,
       title: "Programming Languages",
       description: "Java, Python, C/C++, JavaScript, SQL, HTML, CSS, MATLAB",
     },
     {
-      icon: <Database className="w-8 h-8 text-green-400" />,
+      icon: <Database className="w-8 h-8 text-emerald-400" />,
       title: "Databases & Tools", 
       description: "MySQL, PostgreSQL, MongoDB, Redis, SQLite",
     },
     {
-      icon: <Cloud className="w-8 h-8 text-purple-400" />,
+      icon: <Cloud className="w-8 h-8 text-violet-400" />,
       title: "Cloud & Frameworks",
       description: "AWS (RDS, S3, VPC, EC2, EKS, Lambda), Azure, SpringBoot, React, NodeJS, Kafka, Docker, Kubernetes",
     },
     {
-      icon: <Brain className="w-8 h-8 text-yellow-400" />,
+      icon: <Brain className="w-8 h-8 text-amber-400" />,
       title: "AI/ML Technologies",
       description: "PyTorch, TensorFlow, NumPy, Pandas, BERT, LLMs, Graph Neural Networks",
     },
@@ -28,28 +28,29 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             About Me
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             I'm a passionate software engineer pursuing my MS in Information Systems at Carnegie Mellon University. 
             With experience in distributed systems, AI/ML, and scalable data pipelines, I love solving complex technical challenges.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {/* Skills Grid - New Asymmetric Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
           {skills.map((skill, index) => (
-            <Card key={index} className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-              <CardContent className="p-6 text-center">
-                <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+            <Card key={index} className={`bg-gradient-to-br from-gray-800/40 to-gray-900/40 border-gray-700/30 hover:border-cyan-400/30 transition-all duration-500 hover:scale-105 group backdrop-blur-sm ${index === 0 ? 'md:col-span-2' : ''} ${index === 3 ? 'lg:col-span-2' : ''}`}>
+              <CardContent className="p-6 text-center h-full flex flex-col justify-center">
+                <div className="mb-6 flex justify-center group-hover:scale-125 transition-transform duration-500">
                   {skill.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
+                <h3 className="text-lg font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {skill.title}
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-400 text-sm leading-relaxed">
                   {skill.description}
                 </p>
               </CardContent>
@@ -57,38 +58,91 @@ const About = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 md:p-12 border border-white/10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                My Journey
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Currently pursuing my MS at Carnegie Mellon University (GPA: 3.54/4.0) after completing my BTech in Computer Science 
-                from PES University (GPA: 3.89/4.0). I work as a Research Assistant at CMU, building AI-powered autograder frameworks 
-                and previously worked as a Software Engineer at Hevodata, architecting scalable ETL pipelines and data ingestion systems.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span className="text-gray-300">3+ Years Experience</span>
+        {/* Education & Achievements Section - New Side-by-Side Layout */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Education */}
+          <Card className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-400/20 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg">
+                  <GraduationCap className="w-8 h-8 text-blue-400" />
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  <span className="text-gray-300">Research Published at ACM</span>
+                <h3 className="text-2xl font-bold text-white">Education</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="border-l-4 border-blue-400 pl-6">
+                  <h4 className="text-xl font-semibold text-white mb-2">
+                    Carnegie Mellon University
+                  </h4>
+                  <p className="text-cyan-400 font-medium mb-2">MS in Information Systems</p>
+                  <p className="text-gray-400 mb-2">August 2024 - December 2025</p>
+                  <p className="text-gray-300 mb-3">GPA: 3.54/4.0</p>
+                  <p className="text-sm text-gray-400">
+                    Advanced NLP, Engineering Data Intensive Scalable Systems, Distributed Systems
+                  </p>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">MRD Academic Excellence Scholarship</span>
+                
+                <div className="border-l-4 border-purple-400 pl-6">
+                  <h4 className="text-xl font-semibold text-white mb-2">
+                    PES University
+                  </h4>
+                  <p className="text-purple-400 font-medium mb-2">BTech in Computer Science</p>
+                  <p className="text-gray-400 mb-2">August 2018 - May 2022</p>
+                  <p className="text-gray-300 mb-3">GPA: 3.89/4.0</p>
+                  <p className="text-sm text-gray-400">
+                    Database Management, Advanced Algorithms, Cloud Computing, Machine Learning, AI
+                  </p>
                 </div>
               </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-2xl flex items-center justify-center">
-                <div className="text-6xl md:text-8xl">👨‍💻</div>
+            </CardContent>
+          </Card>
+
+          {/* Achievements & Highlights */}
+          <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-400/20 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg">
+                  <Award className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Achievements</h3>
               </div>
-            </div>
-          </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">MRD Academic Excellence Scholarship</h4>
+                    <p className="text-gray-300 text-sm">Awarded to top 10% of the cohort at Carnegie Mellon University</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Research Publication</h4>
+                    <p className="text-gray-300 text-sm">Published paper at 7th ICMLT 2022 in Rome, accepted by ACM</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Industry Impact</h4>
+                    <p className="text-gray-300 text-sm">Improved system performance by 60%+ and processed 400+ customer integrations</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Leadership</h4>
+                    <p className="text-gray-300 text-sm">Led research team of 4 and mentored junior developers</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
