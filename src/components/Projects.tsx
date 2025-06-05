@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: "AI-Powered Autograder Framework",
-      description: "Building an AI-powered autograder using Docker, Kafka, Hadoop and microservices architecture to evaluate distributed systems projects. Leveraged LLMs to automate test case generation for 400+ submissions across 5 projects.",
+      description: "Building an AI-powered autograder using Docker, Kafka, Hadoop and microservices architecture to evaluate distributed systems projects involving multi-node API deployments. Leveraged LLMs to automate test case generation for 400+ submissions across 5 projects and 11 labs.",
       image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
       tags: ["Docker", "Kafka", "Hadoop", "LLMs", "Microservices"],
       liveUrl: "#",
@@ -15,17 +15,25 @@ const Projects = () => {
     },
     {
       title: "Graph ML on Crystals",
-      description: "Collaborated with 4 researchers to represent 1.5M crystal structures as graphs. Applied KNN, eigenvector centrality, and graph compression techniques, achieving 95% accuracy. Published research at ACM ICMLT 2022.",
+      description: "Collaborated with 4 researchers to model 1.5M crystal structures as graphs (atoms as nodes, bonds as edges), applying KNN, eigenvector centrality, and graph compression to achieve 95% prediction accuracy. Authored and presented at 7th ICMLT 2022 in Rome, published by ACM.",
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
-      tags: ["Graph Neural Networks", "PyTorch", "Machine Learning", "Research"],
+      tags: ["Graph Neural Networks", "PyTorch", "Machine Learning", "Research", "ACM"],
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: "Book Recommender Microservice System",
+      description: "Containerized and deployed a 5-service bookstore recommender system using Docker, Kubernetes (EKS), and AWS RDS. Implemented liveness probes, CI/CD pipelines, and Kafka integration for asynchronous workflows.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      tags: ["Docker", "Kubernetes", "AWS EKS", "Kafka", "Microservices", "CI/CD"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
       title: "Scalable Data Ingestion Pipeline",
-      description: "Designed and implemented a scalable data ingestion pipeline for LinkedIn Ads connector using RabbitMQ and Kafka to handle 40+ data schemas across 400+ customers, improving sync latency and system robustness.",
+      description: "Designed and implemented a scalable data ingestion pipeline for LinkedIn Ads connector using RabbitMQ and Kafka to handle 40+ data schemas across 400+ customers. Re-architected Redis strategy, doubling throughput to 10K events/min.",
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop",
-      tags: ["Kafka", "RabbitMQ", "ETL", "Distributed Systems"],
+      tags: ["Kafka", "RabbitMQ", "ETL", "Redis", "Distributed Systems"],
       liveUrl: "#",
       githubUrl: "#",
     },

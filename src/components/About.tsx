@@ -7,22 +7,22 @@ const About = () => {
     {
       icon: <Code className="w-8 h-8 text-blue-400" />,
       title: "Programming Languages",
-      description: "Java, Python, C/C++, JavaScript, SQL, HTML, CSS",
+      description: "Java, Python, C/C++, JavaScript, SQL, HTML, CSS, MATLAB",
     },
     {
       icon: <Database className="w-8 h-8 text-green-400" />,
       title: "Databases & Tools", 
-      description: "MySQL, PostgreSQL, MongoDB, Redis, Docker, Kubernetes",
+      description: "MySQL, PostgreSQL, MongoDB, Redis, SQLite",
     },
     {
       icon: <Cloud className="w-8 h-8 text-purple-400" />,
       title: "Cloud & Frameworks",
-      description: "AWS, Azure, SpringBoot, React, NodeJS, Kafka, Jenkins",
+      description: "AWS (RDS, S3, VPC, EC2, EKS, Lambda), Azure, SpringBoot, React, NodeJS, Kafka, Docker, Kubernetes",
     },
     {
       icon: <Brain className="w-8 h-8 text-yellow-400" />,
       title: "AI/ML Technologies",
-      description: "PyTorch, TensorFlow, BERT, LLMs, Graph Neural Networks",
+      description: "PyTorch, TensorFlow, NumPy, Pandas, BERT, LLMs, Graph Neural Networks",
     },
   ];
 
@@ -64,9 +64,9 @@ const About = () => {
                 My Journey
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Currently pursuing my MS at Carnegie Mellon University after completing my BTech in Computer Science. 
-                I've worked as a Software Engineer at Hevodata, building scalable ETL pipelines and data ingestion systems. 
-                My research focuses on AI-powered autograding systems and graph neural networks.
+                Currently pursuing my MS at Carnegie Mellon University (GPA: 3.54/4.0) after completing my BTech in Computer Science 
+                from PES University (GPA: 3.89/4.0). I work as a Research Assistant at CMU, building AI-powered autograder frameworks 
+                and previously worked as a Software Engineer at Hevodata, architecting scalable ETL pipelines and data ingestion systems.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -79,7 +79,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Carnegie Mellon Graduate</span>
+                  <span className="text-gray-300">MRD Academic Excellence Scholarship</span>
                 </div>
               </div>
             </div>
