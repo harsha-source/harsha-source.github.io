@@ -1,4 +1,3 @@
-
 import { Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -83,7 +82,7 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     variant="outline"
-                    className="border-gray-600 text-white hover:bg-purple-700/20 hover:border-purple-500 flex items-center space-x-2 transition-all duration-300"
+                    className="border-gray-600 text-black hover:bg-purple-700/20 hover:border-purple-500 flex items-center space-x-2 transition-all duration-300"
                     onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <Github size={16} />
