@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -10,32 +10,28 @@ const Projects = () => {
       description: "Building an AI-powered autograder using Docker, Kafka, Hadoop and microservices architecture to evaluate distributed systems projects involving multi-node API deployments. Leveraged LLMs to automate test case generation for 400+ submissions across 5 projects and 11 labs.",
       image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
       tags: ["Docker", "Kafka", "Hadoop", "LLMs", "Microservices"],
-      liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/CMU-Heinz-95702/distributed-systems-project-04-harsha-source/tree/main",
     },
     {
       title: "Graph ML on Crystals",
       description: "Collaborated with 4 researchers to model 1.5M crystal structures as graphs (atoms as nodes, bonds as edges), applying KNN, eigenvector centrality, and graph compression to achieve 95% prediction accuracy. Authored and presented at 7th ICMLT 2022 in Rome, published by ACM.",
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
       tags: ["Graph Neural Networks", "PyTorch", "Machine Learning", "Research", "ACM"],
-      liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/harsha-source/GNN1",
     },
     {
       title: "Book Recommender Microservice System",
       description: "Containerized and deployed a 5-service bookstore recommender system using Docker, Kubernetes (EKS), and AWS RDS. Implemented liveness probes, CI/CD pipelines, and Kafka integration for asynchronous workflows.",
       image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop",
       tags: ["Docker", "Kubernetes", "AWS EKS", "Kafka", "Microservices", "CI/CD"],
-      liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/harsha-source/Book-Recommender-Microservice",
     },
     {
       title: "Contain-19 Android App",
       description: "Developed a Java-based Android app to detect nearby quarantine zones using geofencing with GeoFire and Firebase DB and P2P technology to assist with social distancing during COVID-19.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
       tags: ["Android", "Java", "Firebase", "GeoFencing", "P2P"],
-      liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/ishitadatta/Productiva",
     },
   ];
 
@@ -83,21 +79,15 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex space-x-3">
-                  <Button 
-                    size="sm" 
-                    className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white flex items-center space-x-2 shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
-                  >
-                    <ExternalLink size={16} />
-                    <span>Demo</span>
-                  </Button>
+                <div className="flex justify-center">
                   <Button 
                     size="sm" 
                     variant="outline"
                     className="border-gray-600 text-gray-300 hover:bg-purple-700/20 hover:border-purple-500 flex items-center space-x-2 transition-all duration-300"
+                    onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <Github size={16} />
-                    <span>Code</span>
+                    <span>View Code</span>
                   </Button>
                 </div>
               </CardContent>
