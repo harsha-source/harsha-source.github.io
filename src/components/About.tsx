@@ -1,4 +1,3 @@
-
 import { Code, Database, Cloud, Brain, Award, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -42,7 +41,7 @@ const About = () => {
         {/* Skills Grid - New Asymmetric Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
           {skills.map((skill, index) => (
-            <Card key={index} className={`bg-gradient-to-br from-gray-900/60 to-black/60 border-gray-700/30 hover:border-purple-400/30 transition-all duration-500 hover:scale-105 group backdrop-blur-sm ${index === 0 ? 'md:col-span-2' : ''} ${index === 3 ? 'lg:col-span-2' : ''}`}>
+            <Card key={index} className={`bg-black border-gray-700/30 hover:border-purple-400/30 transition-all duration-500 hover:scale-105 group backdrop-blur-sm ${index === 0 ? 'md:col-span-2' : ''} ${index === 3 ? 'lg:col-span-2' : ''}`}>
               <CardContent className="p-6 text-center h-full flex flex-col justify-center">
                 <div className="mb-6 flex justify-center group-hover:scale-125 transition-transform duration-500">
                   {skill.icon}
@@ -61,7 +60,7 @@ const About = () => {
         {/* Education & Achievements Section - New Side-by-Side Layout */}
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Education */}
-          <Card className="bg-gradient-to-br from-purple-600/10 to-indigo-600/10 border-purple-400/20 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 backdrop-blur-sm">
+          <Card className="bg-black border-purple-400/20 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="p-3 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-lg">
@@ -99,7 +98,7 @@ const About = () => {
           </Card>
 
           {/* Achievements & Highlights */}
-          <Card className="bg-gradient-to-br from-indigo-600/10 to-purple-600/10 border-indigo-400/20 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 backdrop-blur-sm">
+          <Card className="bg-black border-indigo-400/20 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="p-3 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-lg">
