@@ -66,9 +66,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="lg:col-span-2 bg-gradient-to-br from-gray-900/60 to-black/60 border-gray-700/30">
+          <Card className="bg-black border-gray-700/30">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -120,7 +120,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-6">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="bg-gradient-to-br from-gray-900/60 to-black/60 border-gray-700/30 hover:bg-gray-800/40 transition-all duration-300">
+              <Card key={index} className="bg-black border-gray-700/30 hover:bg-gray-900/40 transition-all duration-300">
                 <CardContent className="p-6">
                   <a href={info.link} className="flex items-center space-x-4 group">
                     <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">

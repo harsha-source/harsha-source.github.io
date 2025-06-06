@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: "Book Recommender Microservice System",
       description: "Containerized and deployed a 5-service bookstore recommender system using Docker, Kubernetes (EKS), and AWS RDS. Implemented liveness probes, CI/CD pipelines, and Kafka integration for asynchronous workflows.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop",
       tags: ["Docker", "Kubernetes", "AWS EKS", "Kafka", "Microservices", "CI/CD"],
       liveUrl: "#",
       githubUrl: "#",
@@ -54,14 +54,14 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-gradient-to-br from-gray-900/60 to-black/60 border-purple-700/50 overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 group backdrop-blur-sm">
+            <Card key={index} className="bg-black border-purple-700/50 overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 group backdrop-blur-sm">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
                 </div>

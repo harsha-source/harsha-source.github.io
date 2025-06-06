@@ -52,7 +52,7 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="bg-gradient-to-r from-gray-900/40 to-black/40 border-l-4 border-l-purple-400 border-gray-700/50 hover:shadow-2xl hover:shadow-purple-500/5 transition-all duration-500 backdrop-blur-sm group">
+            <Card key={index} className="bg-black border-l-4 border-l-purple-400 border-gray-700/50 hover:shadow-2xl hover:shadow-purple-500/5 transition-all duration-500 backdrop-blur-sm group">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex items-start space-x-4 mb-4 lg:mb-0">
