@@ -83,7 +83,7 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     variant="outline"
-                    className="border-gray-600 text-gray-300 hover:bg-purple-700/20 hover:border-purple-500 flex items-center space-x-2 transition-all duration-300"
+                    className="border-gray-600 text-white hover:bg-purple-700/20 hover:border-purple-500 flex items-center space-x-2 transition-all duration-300"
                     onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <Github size={16} />
