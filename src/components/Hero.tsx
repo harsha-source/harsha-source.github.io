@@ -48,7 +48,7 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-gray-600 text-gray-300 hover:bg-gray-800/50 px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
+            className="border-gray-600 text-black hover:bg-gray-800/50 px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
             onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
           >
             Get In Touch
