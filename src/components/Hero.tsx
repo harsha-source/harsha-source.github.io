@@ -46,10 +46,10 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center space-x-6 mb-16 animate-fade-in delay-1000">
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
+          <a href="https://github.com/harsha-source" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
             <Github size={28} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
+          <a href="https://www.linkedin.com/in/harsha-durvasula-1353971a4/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
             <Linkedin size={28} />
           </a>
           <a href="mailto:hdurvasu@andrew.cmu.edu" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
