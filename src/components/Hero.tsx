@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -23,7 +22,6 @@ const Hero = () => {
                 alt="Harsha Durvasula"
                 className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-gray-700/50 shadow-2xl"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
             </div>
           </div>
 
