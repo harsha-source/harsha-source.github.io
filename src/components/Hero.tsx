@@ -27,7 +27,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl text-slate-300 max-w-lg">
-              Building scalable distributed systems and AI-powered solutions at Carnegie Mellon University
+              MS in Information Systems at Carnegie Mellon University. Passionate about scalable distributed systems, AI-powered solutions, and building innovative data-intensive applications.
             </p>
           </div>
 

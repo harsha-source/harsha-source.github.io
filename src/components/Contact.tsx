@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageSquare, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -115,7 +114,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <Card className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50">
+            <Card className="bg-slate-900/50 border-slate-700/50">
               <CardContent className="p-6">
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                   <User className="w-5 h-5 text-emerald-400" />
@@ -132,7 +131,7 @@ const Contact = () => {
                       href={social.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center justify-center w-12 h-12 bg-slate-700/50 rounded-lg transition-all duration-300 group ${social.color}`}
+                      className={`flex items-center justify-center w-12 h-12 bg-slate-800/50 border border-slate-700/50 rounded-lg transition-all duration-300 group ${social.color}`}
                       title={social.title}
                     >
                       <span className="text-slate-400 group-hover:text-white transition-colors duration-300">
