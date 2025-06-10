@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageSquare, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,7 +17,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     toast({
       title: "Message sent!",
       description: "Thank you for your message. I'll get back to you soon.",
@@ -34,13 +33,13 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6 text-purple-400" />,
+      icon: <Mail className="w-6 h-6 text-blue-400" />,
       title: "Email",
       detail: "hdurvasu@andrew.cmu.edu",
       link: "mailto:hdurvasu@andrew.cmu.edu",
     },
     {
-      icon: <Phone className="w-6 h-6 text-indigo-400" />,
+      icon: <Phone className="w-6 h-6 text-green-400" />,
       title: "Phone",
       detail: "(412) 844-0581",
       link: "tel:+14128440581",
@@ -58,134 +57,153 @@ const Contact = () => {
       icon: <Github className="w-6 h-6" />,
       title: "GitHub",
       link: "https://github.com/harsha-source",
+      color: "hover:bg-gray-700",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       title: "LinkedIn", 
       link: "https://www.linkedin.com/in/harsha-durvasula-1353971a4/",
+      color: "hover:bg-blue-600",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       link: "mailto:hdurvasu@andrew.cmu.edu",
+      color: "hover:bg-green-600",
     },
   ];
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Contact Me
+          <div className="flex items-center justify-center space-x-3 text-purple-400 font-medium mb-4">
+            <div className="w-12 h-px bg-purple-400"></div>
+            <span className="text-sm uppercase tracking-wider">Get In Touch</span>
+            <div className="w-12 h-px bg-purple-400"></div>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Let's Work Together
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Have a project in mind or want to discuss opportunities in software engineering, 
-            AI/ML, or distributed systems? I'd love to hear from you!
+            Looking for backend engineering opportunities starting December 2025. 
+            Let's discuss how we can build scalable solutions together!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="bg-black border-gray-700/30">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-purple-400"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-purple-400"
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-purple-400 resize-none"
-                  />
-                </div>
-                <Button 
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-3 flex items-center justify-center space-x-2"
-                >
-                  <Send size={20} />
-                  <span>Send Message</span>
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Information */}
-          <div className="space-y-6">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="bg-black border-gray-700/30 hover:bg-gray-900/40 transition-all duration-300">
-                <CardContent className="p-6">
-                  <a href={info.link} className="flex items-center space-x-4 group">
-                    <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      {info.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
-                        {info.title}
-                      </h4>
-                      <p className="text-gray-400">{info.detail}</p>
-                    </div>
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
-
-            <div className="bg-gradient-to-r from-purple-600/10 to-indigo-600/10 rounded-2xl p-6 border border-gray-700/30">
-              <h4 className="text-lg font-semibold text-black mb-3">Let's Build Something Great</h4>
-              <p className="text-gray-400 text-sm">
-                Currently open to full-time opportunities starting December 2025. 
-                Let's discuss how we can create innovative solutions together!
-              </p>
-              
-              {/* Social Links */}
-              <div className="flex space-x-4 mt-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-purple-600 rounded-full transition-colors duration-300 group"
-                    title={social.title}
-                  >
-                    <span className="text-gray-400 group-hover:text-white transition-colors duration-300">
-                      {social.icon}
-                    </span>
-                  </a>
-                ))}
-              </div>
+          <div className="lg:col-span-1 space-y-6">
+            <div className="space-y-4">
+              {contactInfo.map((info, index) => (
+                <Card key={index} className="bg-gray-900/50 border-gray-700/50 hover:bg-gray-900/70 transition-all duration-300 group">
+                  <CardContent className="p-6">
+                    <a href={info.link} className="flex items-center space-x-4 group">
+                      <div className="flex-shrink-0 p-3 bg-gray-800/50 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                        {info.icon}
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
+                          {info.title}
+                        </h4>
+                        <p className="text-gray-400">{info.detail}</p>
+                      </div>
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
+
+            {/* Social Links */}
+            <Card className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border-gray-700/50">
+              <CardContent className="p-6">
+                <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                  <User className="w-5 h-5 text-blue-400" />
+                  <span>Connect With Me</span>
+                </h4>
+                <p className="text-gray-400 text-sm mb-4">
+                  Open to backend engineering roles and exciting projects in distributed systems and AI/ML.
+                </p>
+                
+                <div className="flex space-x-3">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center justify-center w-12 h-12 bg-gray-800/50 rounded-lg transition-all duration-300 group ${social.color}`}
+                      title={social.title}
+                    >
+                      <span className="text-gray-400 group-hover:text-white transition-colors duration-300">
+                        {social.icon}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <Card className="bg-gray-900/50 border-gray-700/50">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center space-x-2">
+                  <MessageSquare className="w-6 h-6 text-blue-400" />
+                  <span>Send Message</span>
+                </h3>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <Input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-blue-400 h-12 rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-blue-400 h-12 rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <Textarea
+                      name="message"
+                      placeholder="Tell me about your project or opportunity..."
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={6}
+                      className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400 focus:border-blue-400 resize-none rounded-lg"
+                    />
+                  </div>
+                  <Button 
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 flex items-center justify-center space-x-2 rounded-lg"
+                  >
+                    <Send size={20} />
+                    <span>Send Message</span>
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="mt-20 pt-8 border-t border-gray-800">
+      <div className="mt-20 pt-8 border-t border-gray-800/50">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-500">
             © {new Date().getFullYear()} Harsha Durvasula. All rights reserved.
