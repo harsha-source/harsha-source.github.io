@@ -67,10 +67,10 @@ const Hero = () => {
 
         {/* Right Column - Visual Elements */}
         <div className="relative">
-          {/* Profile Image with Modern Frame */}
-          <div className="relative max-w-md mx-auto">
+          {/* Profile Image with Modern Frame - Smaller size */}
+          <div className="relative max-w-xs mx-auto">
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-cyan-500/20 rounded-3xl transform rotate-3"></div>
-            <div className="relative bg-slate-900 rounded-3xl p-8 border border-slate-700/50">
+            <div className="relative bg-slate-900 rounded-3xl p-6 border border-slate-700/50">
               <img 
                 src="/lovable-uploads/9f2b8407-054b-4d02-99ed-c6d8bdab5edd.png" 
                 alt="Harsha Durvasula"
@@ -78,27 +78,22 @@ const Hero = () => {
               />
               
               {/* Tech Stack Floating Cards */}
-              <div className="absolute -top-4 -left-4 bg-slate-800 border border-slate-700 rounded-xl p-3 shadow-xl">
-                <Code className="w-6 h-6 text-emerald-400" />
+              <div className="absolute -top-3 -left-3 bg-slate-800 border border-slate-700 rounded-xl p-2 shadow-xl">
+                <Code className="w-5 h-5 text-emerald-400" />
               </div>
-              <div className="absolute -top-4 -right-4 bg-slate-800 border border-slate-700 rounded-xl p-3 shadow-xl">
-                <Database className="w-6 h-6 text-cyan-400" />
+              <div className="absolute -top-3 -right-3 bg-slate-800 border border-slate-700 rounded-xl p-2 shadow-xl">
+                <Database className="w-5 h-5 text-cyan-400" />
               </div>
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-slate-800 border border-slate-700 rounded-xl p-3 shadow-xl">
-                <Server className="w-6 h-6 text-teal-400" />
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-slate-800 border border-slate-700 rounded-xl p-2 shadow-xl">
+                <Server className="w-5 h-5 text-teal-400" />
               </div>
             </div>
           </div>
 
-          {/* Stats Cards */}
-          <div className="absolute top-8 -left-8 bg-slate-900/90 backdrop-blur border border-slate-700/50 rounded-xl p-4 shadow-xl">
-            <div className="text-2xl font-bold text-white">3+</div>
-            <div className="text-sm text-slate-400">Years Experience</div>
-          </div>
-          
-          <div className="absolute bottom-8 -right-8 bg-slate-900/90 backdrop-blur border border-slate-700/50 rounded-xl p-4 shadow-xl">
-            <div className="text-2xl font-bold text-white">10K+</div>
-            <div className="text-sm text-slate-400">Events/Min</div>
+          {/* Stats Card - Only years experience */}
+          <div className="absolute top-6 -left-6 bg-slate-900/90 backdrop-blur border border-slate-700/50 rounded-xl p-3 shadow-xl">
+            <div className="text-xl font-bold text-white">3+</div>
+            <div className="text-xs text-slate-400">Years Experience</div>
           </div>
         </div>
       </div>
