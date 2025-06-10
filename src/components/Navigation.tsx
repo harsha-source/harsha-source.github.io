@@ -39,13 +39,13 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-xl z-50 border-b border-gray-800/50">
+    <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-xl z-50 border-b border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-2xl font-bold">
             <span className="text-white">HARSHA</span>
-            <span className="text-blue-400">.</span>
+            <span className="text-emerald-400">.</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -56,8 +56,8 @@ const Navigation = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
-                    ? "text-blue-400 bg-blue-400/10"
-                    : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+                    ? "text-emerald-400 bg-emerald-400/10"
+                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                 }`}
               >
                 {item.label}
@@ -65,21 +65,11 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Contact Button */}
-          <div className="hidden md:block">
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300"
-            >
-              Hire Me
-            </button>
-          </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 rounded-lg hover:bg-gray-800/50 transition-colors duration-300"
+              className="text-slate-300 hover:text-white p-2 rounded-lg hover:bg-slate-800/50 transition-colors duration-300"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -96,19 +86,13 @@ const Navigation = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`px-4 py-3 rounded-lg text-sm font-medium text-left transition-all duration-300 ${
                     activeSection === item.id
-                      ? "text-blue-400 bg-blue-400/10"
-                      : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+                      ? "text-emerald-400 bg-emerald-400/10"
+                      : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-300 mt-4"
-              >
-                Hire Me
-              </button>
             </div>
           </div>
         )}
